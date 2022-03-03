@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+<body>
+    <p><a id="w3r" href="https://www.w3resource.com/" hreflang="en-us" rel="nofollow" target="_seft">Ngô Huỳnh Đức</a></p>
+    <button onclick="getAttributes()">Click to get Attributes</button>
+    <script>
+        function getAttributes(){
+        const element = document.getElementById('w3r');
+        //Sử dụng phương thức getAttributeNames () để lấy một mảng tên thuộc tính của phần tử.
+        //Sử dụng phương thức Reduce () để lặp qua mảng.
+        //Trên mỗi lần lặp, thêm một cặp key/value mới chứa tên và giá trị của thuộc tính.
+        const attrs = element.getAttributeNames().reduce((acc, name) => {
+        return {...acc, [name]: element.getAttribute(name)};
+        }, {});
+        //alert một Object
+        alert("Thuộc tính và giá trị của thẻ a: " + JSON.stringify(attrs));
+        }
+    </script>
+</body>
+</html>

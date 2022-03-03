@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+    <input type="text" name="text-input" id="input1">
+    <button onclick="findLongestWord()">Click để tìm từ dài nhất</button>
+    <p id="output"></p>
+    <script>
+            function findLongestWord() {
+                var str=document.getElementById("input1").value;
+                var longestWord = str.split(' ').sort(function(a, b) { return b.length - a.length; });
+                console.log(longestWord);
+                document.getElementById("output").innerHTML=longestWord[0];
+                }
+    </script>
+</body>
+</html>

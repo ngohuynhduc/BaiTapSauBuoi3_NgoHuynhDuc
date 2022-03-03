@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    <input type="text" name="text-input" id="input1">
+    <button onclick="sortAlphabet()">Click để sắp xếp</button>
+    <input type="text" name="text-output" id="output">
+    <script>
+        
+        function sortAlphabet(){
+            var inputData = document.getElementById("input1").value;
+            //split để chuyển String thành Array
+            //sort để sắp xếp mảng đã convert theo alphabet
+            //join để convert Array lại thành String
+            let sortData= inputData.split('').sort().join('');
+            document.getElementById("output").value=sortData;
+        }
+    </script>
+</body>
+</html>
